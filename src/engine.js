@@ -1,6 +1,6 @@
 import cloneDeep from 'clone-deep'
 const DEFAULT_FUNC = ({ $canvas, ctx, data }) => void 0
-class Engine {
+export class Engine {
 	constructor({ 
 		$canvas = null, 
 		contextType = "2d",
