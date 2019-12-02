@@ -8,12 +8,15 @@ class Engine {
 		onInit = DEFAULT_FUNC,
 		onDraw = DEFAULT_FUNC,
 		onStart = DEFAULT_FUNC,
-		onStop = DEFAULT_FUNC
+		onStop = DEFAULT_FUNC,
+		clearOnUpdate = true,
+		autoStart = true
 	} = {}) {
 		this.$canvas = $canvas instanceof HTMLElement && $canvas.tagName.toLowerCase() === "canvas" ? $canvas : null
 		this.data = !!data ? cloneDeep(data) : null
 		this.onInit = typeof onInit === "function" ? onInit : null
 		this.onUpdate = typeof onUpdate === "function" ? onUpdate : null
+		this.clearOnUpdate = !!clearOnUpdate
 
 		this.onDraw = typeof onDraw === "function" 
 			? [onDraw] 
@@ -32,6 +35,7 @@ class Engine {
 				data: this.data
 			}
 			this.onInit( this.arg )
+			if( autoStart === true ) this._start()
 		}
 	}
 	_isRunning = false
@@ -46,6 +50,7 @@ class Engine {
 		if( !!this.onUpdate ) this.onUpdate( this.arg )
 	}
 	_draw () {
+		if( !!this.clearOnUpdate ) this._clearCanvas()
 		if( !!this.onDraw && this.onDraw.length ) 
 			this.onDraw.forEach( fn => fn( this.arg ) )
 	}
@@ -63,8 +68,10 @@ class Engine {
 		this._run()
 	}
 
+	_clearCanvas () { this.arg.ctx.clearRect(0, 0, this.arg.$canvas.width, this.arg.$canvas.height) }
 
 
+	get isRunning () { return this._isRunning }
 	update () { this._update() }
 	draw () { this._draw() }
 	toggle () { this._toggle() }
