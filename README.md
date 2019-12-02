@@ -1,6 +1,9 @@
 # canvas-engine
 
-[![CircleCI Status](https://circleci.com/gh/Julien-Amblard/directional-hover.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/Julien-Amblard/directional-hover)
+[![CircleCI Status](https://circleci.com/gh/Julien-Amblard/canvas-engine.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/Julien-Amblard/canvas-engine)
+[![npm](https://img.shields.io/npm/dt/canvas-engine.svg?style=flat-square)](https://www.npmjs.com/package/canvas-engine)
+[![npm](https://img.shields.io/npm/v/canvas-engine.svg?style=flat-square)](https://www.npmjs.com/package/canvas-engine)
+[![npm](https://img.shields.io/npm/l/canvas-engine.svg?style=flat-square)](https://github.com/Julien-Amblard/canvas-engine/blob/master/LICENSE)
   
 > A basic canvas loop engine
 
