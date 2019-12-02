@@ -424,18 +424,10 @@ const MyLoop = new Engine({
 |:----|:----|
 | `boolean` | the current loop status (if he's running or not) |
 
+---
 
+---
 
-
-
-
-
-<br />
-<br />
-<br />
-<br />
---- 
---- 
 ## TODO  
 - [x] Doc
 - [ ] TU
