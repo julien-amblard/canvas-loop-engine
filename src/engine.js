@@ -20,7 +20,7 @@ class Engine {
 		this.data = !!data ? cloneDeep(data) : null
 		this.clearOnUpdate = !!clearOnUpdate
 		
-		this.onInit = typeof onDraw === "function" 
+		this.onInit = typeof onInit === "function" 
 			? [onInit]
 			: Array.isArray(onInit)
 				? onInit.filter( fn => typeof fn === "function" )
