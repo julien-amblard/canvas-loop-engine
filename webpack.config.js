@@ -4,7 +4,7 @@ const config = {
 	entry : './src/engine.js',
 	output : {
 		path: path.resolve(__dirname,'lib'),
-		filename: 'canvasEngine.class.min.js',
+		filename: 'canvasLoopEngine.class.min.js',
 		libraryTarget: 'umd'
 	},
 	mode: 'production',

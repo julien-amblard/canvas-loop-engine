@@ -1,7 +1,7 @@
 {
-  "name": "canvas-engine",
+  "name": "canvas-loop-engine",
   "description": "A basic loop engine for canvas animation",
-  "main": "lib/canvasEngine.class.min.js",
+  "main": "lib/canvasLoopEngine.class.min.js",
   "scripts": {
     "test": "yarn jest --config=./tests/jest.config.js --verbose",
     "build": "rimraf ./dist && webpack --config webpack.config.js",

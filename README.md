@@ -1,9 +1,9 @@
-# canvas-engine
+# canvas-loop-engine
 
 [![CircleCI Status](https://circleci.com/gh/Julien-Amblard/canvas-engine.svg?style=shield&circle-token=:circle-token)](https://circleci.com/gh/Julien-Amblard/canvas-engine)
-[![npm](https://img.shields.io/npm/dt/canvas-engine.svg?style=flat-square)](https://www.npmjs.com/package/canvas-engine)
-[![npm](https://img.shields.io/npm/v/canvas-engine.svg?style=flat-square)](https://www.npmjs.com/package/canvas-engine)
-[![npm](https://img.shields.io/npm/l/canvas-engine.svg?style=flat-square)](https://github.com/Julien-Amblard/canvas-engine/blob/master/LICENSE)
+[![npm](https://img.shields.io/npm/dt/canvas-loop-engine.svg?style=flat-square)](https://www.npmjs.com/package/canvas-loop-engine)
+[![npm](https://img.shields.io/npm/v/canvas-loop-engine.svg?style=flat-square)](https://www.npmjs.com/package/canvas-loop-engine)
+[![npm](https://img.shields.io/npm/l/canvas-loop-engine.svg?style=flat-square)](https://github.com/Julien-Amblard/canvas-engine/blob/master/LICENSE)
   
 > A basic loop engine for canvas animation
 
@@ -34,16 +34,16 @@
 
 ## Install <a id="install"></a>
 
-`npm i canvas-engine --save`  
+`npm i canvas-loop-engine --save`  
 or  
-`yarn add canvas-engine`  
+`yarn add canvas-loop-engine`  
 
 ---
 
 ### Importing <a id="importing"></a>
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({ ...options })
 MyLoop.start()
@@ -60,7 +60,7 @@ MyLoop.start()
 | `HTMLCanvasElement` | `null` | `true` | The canvas html element you want to draw on. |
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas")
@@ -74,7 +74,7 @@ const MyLoop = new Engine({
 | `string` | `"2d"` | `false` | The canvas context type giving in the getContext. See [getContext documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext)  |
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas"),
@@ -90,7 +90,7 @@ const MyLoop = new Engine({
 | `object` | `null` | `false` | The canvas context attributes giving in the getContext. See [getContext documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement/getContext)  |
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas"),
@@ -110,7 +110,7 @@ const MyLoop = new Engine({
 | `boolean` | `true` | `false` | Define if the loop engine should start automaticaly. |
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas"),
@@ -129,7 +129,7 @@ const MyLoop = new Engine({
 > Will trigger just before the onDraw functions
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas"),
@@ -149,7 +149,7 @@ const MyLoop = new Engine({
 > ⚠️ The data object will be deeply clone. It will break every references
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas"),
@@ -174,7 +174,7 @@ const MyLoop = new Engine({
 | data | `any` | the data object you send at the init |
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas"),
@@ -187,7 +187,7 @@ const MyLoop = new Engine({
 ***or***  
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const foo = function ({ $canvas, ctx, data }) {
   //do things
@@ -217,7 +217,7 @@ const MyLoop = new Engine({
 | data | `any` | the data object you send at the init |
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas"),
@@ -230,7 +230,7 @@ const MyLoop = new Engine({
 ***or***  
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const foo = function ({ $canvas, ctx, data }) {
   //do things
@@ -260,7 +260,7 @@ const MyLoop = new Engine({
 | data | `any` | the data object you send at the init |
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas"),
@@ -273,7 +273,7 @@ const MyLoop = new Engine({
 ***or***  
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const foo = function ({ $canvas, ctx, data }) {
   //do things
@@ -303,7 +303,7 @@ const MyLoop = new Engine({
 | data | `any` | the data object you send at the init |
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas"),
@@ -316,7 +316,7 @@ const MyLoop = new Engine({
 ***or***  
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const foo = function ({ $canvas, ctx, data }) {
   //do things
@@ -346,7 +346,7 @@ const MyLoop = new Engine({
 | data | `any` | the data object you send at the init |
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const MyLoop = new Engine({
   $canvas: document.querySelector("canvas"),
@@ -359,7 +359,7 @@ const MyLoop = new Engine({
 ***or***  
 
 ```js
-import Engine from "canvas-engine"
+import Engine from "canvas-loop-engine"
 
 const foo = function ({ $canvas, ctx, data }) {
   //draw things
