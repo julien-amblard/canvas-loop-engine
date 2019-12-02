@@ -3,12 +3,14 @@ const DEFAULT_FUNC = ({ $canvas, ctx, data }) => void 0
 class Engine {
 	constructor({ 
 		$canvas = null, 
+		contextType = "2d",
+		contextAttributes = null,
 		autoStart = true,
 		clearOnUpdate = true,
 		data = {},
 
-		onUpdate = DEFAULT_FUNC,
 		onInit = DEFAULT_FUNC,
+		onUpdate = DEFAULT_FUNC,
 		onDraw = DEFAULT_FUNC,
 		onStart = DEFAULT_FUNC,
 		onStop = DEFAULT_FUNC
@@ -25,18 +27,6 @@ class Engine {
 			: Array.isArray(onInit)
 				? onInit.filter( fn => typeof fn === "function" )
 				: null
-		
-		this.onUpdate = typeof onUpdate === "function" 
-			? [onUpdate]
-			: Array.isArray(onUpdate)
-				? onUpdate.filter( fn => typeof fn === "function" )
-				: null
-
-		this.onDraw = typeof onDraw === "function" 
-			? [onDraw]
-			: Array.isArray(onDraw)
-				? onDraw.filter( fn => typeof fn === "function" )
-				: null
 
 		this.onStart = typeof onStart === "function" 
 			? [onStart]
@@ -49,13 +39,25 @@ class Engine {
 			: Array.isArray(onStop)
 				? onStop.filter( fn => typeof fn === "function" )
 				: null
+
+		this.onUpdate = typeof onUpdate === "function" 
+			? [onUpdate]
+			: Array.isArray(onUpdate)
+				? onUpdate.filter( fn => typeof fn === "function" )
+				: null
+
+		this.onDraw = typeof onDraw === "function" 
+			? [onDraw]
+			: Array.isArray(onDraw)
+				? onDraw.filter( fn => typeof fn === "function" )
+				: null
 		
 		if( !!!this.$canvas ) console.error("canvas-engine : invalid canvas element")
 		else {
 
 			this.arg = {
 				$canvas: this.$canvas,
-				ctx: this.$canvas.getContext('2d'),
+				ctx: this.$canvas.getContext(contextType, contextAttributes),
 				data: this.data
 			}
 
