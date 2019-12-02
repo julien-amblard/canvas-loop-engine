@@ -13,9 +13,6 @@ const config = {
 	resolve: {
 		extensions: ['.js']
 	},
-	externals: {
-		"clone-deep": "clone-deep"
-	},
 	module: {
 		rules: [
 			{
