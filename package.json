@@ -9,6 +9,7 @@
     "demo": "npm run build && webpack-dev-server --mode production --config webpack.prod.js",
     "prepublishOnly": "npm run build"
   },
+  "files": ["/lib"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Julien-Amblard/canvas-engine.git"
