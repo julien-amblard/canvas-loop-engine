@@ -1,6 +1,6 @@
 {
   "name": "canvas-engine",
-  "description": "A basic canvas loop engine for canvas animation",
+  "description": "A basic loop engine for canvas animation",
   "main": "lib/canvasEngine.class.min.js",
   "scripts": {
     "test": "yarn jest --config=./tests/jest.config.js --verbose",

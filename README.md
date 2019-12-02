@@ -5,7 +5,7 @@
 [![npm](https://img.shields.io/npm/v/canvas-engine.svg?style=flat-square)](https://www.npmjs.com/package/canvas-engine)
 [![npm](https://img.shields.io/npm/l/canvas-engine.svg?style=flat-square)](https://github.com/Julien-Amblard/canvas-engine/blob/master/LICENSE)
   
-> A basic canvas loop engine
+> A basic loop engine for canvas animation
 
 ## [Live example](https://codepen.io/Capse/pen/gObOKGo)
 
