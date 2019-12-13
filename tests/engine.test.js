@@ -62,6 +62,7 @@ describe("Engine 1", () => {
 		expect(MockUpdateFunc1.mock.calls.length).toBe(2)
 		expect(MockDrawFunc1.mock.calls.length).toBe(2)
 	})
+	
 	test("should stop the engine", () => {
 		expect(e.isRunning).toBe(true)
 		e.stop()
