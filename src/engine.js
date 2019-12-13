@@ -1,4 +1,5 @@
 import cloneDeep from 'clone-deep'
+import CheckFunc from "./helpers/checkFuncType"
 const DEFAULT_FUNC = ({ $canvas, ctx, data }) => void 0
 export class Engine {
 	constructor({ 
@@ -22,35 +23,11 @@ export class Engine {
 		this.data = !!data ? cloneDeep(data) : null
 		this.clearOnUpdate = !!clearOnUpdate
 		
-		this.onInit = typeof onInit === "function" 
-			? [onInit]
-			: Array.isArray(onInit)
-				? onInit.filter( fn => typeof fn === "function" )
-				: null
-
-		this.onStart = typeof onStart === "function" 
-			? [onStart]
-			: Array.isArray(onStart)
-				? onStart.filter( fn => typeof fn === "function" )
-				: null
-
-		this.onStop = typeof onStop === "function" 
-			? [onStop]
-			: Array.isArray(onStop)
-				? onStop.filter( fn => typeof fn === "function" )
-				: null
-
-		this.onUpdate = typeof onUpdate === "function" 
-			? [onUpdate]
-			: Array.isArray(onUpdate)
-				? onUpdate.filter( fn => typeof fn === "function" )
-				: null
-
-		this.onDraw = typeof onDraw === "function" 
-			? [onDraw]
-			: Array.isArray(onDraw)
-				? onDraw.filter( fn => typeof fn === "function" )
-				: null
+		this.onInit = CheckFunc(onInit)
+		this.onStart = CheckFunc(onStart)
+		this.onStop = CheckFunc(onStop)
+		this.onUpdate = CheckFunc(onUpdate)
+		this.onDraw = CheckFunc(onDraw)
 		
 		if( !!!this.$canvas ) console.error("canvas-engine : invalid canvas element")
 		else {
