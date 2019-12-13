@@ -3,13 +3,21 @@
   "description": "A basic loop engine for canvas animation",
   "main": "lib/canvasLoopEngine.class.min.js",
   "scripts": {
-    "test": "yarn jest --config=./tests/jest.config.js --verbose",
+    "test": "yarn jest --verbose --watchAll",
+    "ci-test": "yarn jest --verbose --coverage",
+    "report-coverage": "codecov --token=$CODECOV_TOKEN",
     "build": "rimraf ./dist && webpack --config webpack.config.js",
     "dev": "webpack-dev-server --mode development --config webpack.dev.js",
     "demo": "npm run build && webpack-dev-server --mode production --config webpack.prod.js",
     "prepublishOnly": "npm run build"
   },
-  "files": ["/lib"],
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "files": [
+    "/lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Julien-Amblard/canvas-loop-engine.git"
@@ -40,12 +48,15 @@
     "@babel/preset-env": "^7.7.4",
     "babel-jest": "^24.9.0",
     "babel-loader": "^8.0.6",
+    "codecov": "^3.6.1",
     "css-loader": "^3.2.0",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^24.9.0",
+    "jest-canvas-mock": "^2.2.0",
     "node-sass": "^4.13.0",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.1",
+    "wait-for-expect": "^3.0.1",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.9.0"
