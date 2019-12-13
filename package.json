@@ -33,10 +33,13 @@
   },
   "homepage": "https://github.com/Julien-Amblard/canvas-loop-engine#readme",
   "keywords": [
-    "class",
-    "engine",
     "canvas",
-    "requestAnimationFrame"
+    "timer",
+    "loop",
+    "animation",
+    "engine",
+    "requestAnimationFrame",
+    "graphic"
   ],
   "devDependencies": {
     "@babel/cli": "^7.7.4",
