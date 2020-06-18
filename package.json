@@ -20,18 +20,18 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Julien-Amblard/canvas-loop-engine.git"
+    "url": "git+https://github.com/sl-julienamblard/canvas-loop-engine.git"
   },
   "author": {
     "name": "Julien Amblard",
     "email": "amblard.julien@gmail.com",
-    "url": "https://github.com/Julien-Amblard"
+    "url": "https://github.com/sl-julienamblard"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Julien-Amblard/canvas-loop-engine/issues"
+    "url": "https://github.com/sl-julienamblard/canvas-loop-engine/issues"
   },
-  "homepage": "https://github.com/Julien-Amblard/canvas-loop-engine#readme",
+  "homepage": "https://github.com/sl-julienamblard/canvas-loop-engine#readme",
   "keywords": [
     "canvas",
     "timer",
